@@ -1,59 +1,47 @@
 package com.company;
 
 public class Main {
-
-    public static void showInsufficientNotes(int[] notes) {
-        int i, counter = 0;
-        // counting how many notes are < 40
-        for (i = 0; i < notes.length; i++) {
-            if (notes[i] < 40)
-                counter = counter + 1;
-        }
-        // creating new array with size of counter
-        int[] insufficientNotes = new int[counter];
-        // all notes < 40 are put in the array
-        for (i = 0; i < notes.length; i++) {
-            if (notes[i] < 40)
-                insufficientNotes[i] = notes[i];
-        }
-        // printing the notes
-        System.out.print("1. Nicht ausreichende Noten: ");
-        for (i = 0; i < insufficientNotes.length; i++) {
-            System.out.print(insufficientNotes[i] + " ");
-        }
-    }
-
-    public static void calculateAverageNote(int[] notes) {
-        int i, average, averageSum = 0;
-        // calculating the average
-        for (i = 0; i < notes.length; i++) {
-            averageSum = averageSum + notes[i];
-        }
-
-        average = averageSum / notes.length;
-        // printing the answer
-        System.out.print("\n2. Durschnittnote: " + average);
-    }
-
-    public static void calculateRoundedNotes(int[] notes) {
-        int i, average, averageSum = 0;
-        int[] roundedNotes = new int[notes.length];
-
-        for (i = 0; i < notes.length; i++) {
-            if (notes[i] <= 38)
-                roundedNotes[i] = notes[i];
-
-
-        }
-
-
-    }
-
     public static void main(String[] args) {
-        // array with notes
-        int[] notes = { 10, 28, 30, 40, 50, 60, 70, 84, 90, 100 };
+        // Aufgabe1
+        int[] notes = {10, 28, 30, 48, 51, 60, 70, 84, 90, 100};
 
-        showInsufficientNotes(notes);
-        calculateAverageNote(notes);
+        System.out.println("Aufgabe 1");
+
+        Aufgabe1.showInsufficientNotes(notes);
+        Aufgabe1.calculateAverageNote(notes);
+        Aufgabe1.calculateRoundedNotes(notes);
+        Aufgabe1.calculateMaxRoundedNotes(notes);
+
+        // Aufgabe2
+//        int[] numbers = {12,4534546,3534556,4234,6456,234,2342,534,45,6456,67,567,56,34,54,45,5445,45,6,675,7,56,435,4,889,89,67};
+        int[] numbers = {4, 8, 3, 10, 17};
+        System.out.println("\nAufgabe 2");
+
+        Aufgabe2.findMax(numbers);
+        Aufgabe2.findMin(numbers);
+        Aufgabe2.findMaxSum(numbers);
+        Aufgabe2.findMinSum(numbers);
+
+        // Aufgabe3
+        int[] firstNumber = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] secondNumber = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+        int[] thirdNumber = {8, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] fourthNumber = {8, 5, 0, 0, 0, 0, 0, 0, 0};
+        int[] fifthNumber = {2, 3, 6, 0, 0, 0, 0, 0, 0};
+        System.out.println("\nAufgabe 3");
+        Aufgabe3.sum(firstNumber, secondNumber);
+        Aufgabe3.subtraction(thirdNumber, fourthNumber);
+        Aufgabe3.multiplication(fifthNumber, 2);
+        Aufgabe3.division(fifthNumber, 2);
+
+        // Aufgabe4
+        int [] keyboard = {40, 35, 70, 15, 45};
+        int [] usb = {20, 15, 40, 35};
+        int budget = 60;
+        System.out.println("\nAufgabe 4");
+        Aufgabe4.findMin(keyboard);
+        Aufgabe4.findExpensive(keyboard, usb);
+        Aufgabe4.findUsb(usb, budget);
+        Aufgabe4.findProducts(keyboard, usb, budget);
     }
 }
