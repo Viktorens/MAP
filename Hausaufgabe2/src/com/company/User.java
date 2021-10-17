@@ -13,6 +13,7 @@ public class User {
         _sports = sports;
     }
 
+    // Getters and Setters
     public String get_name() {
         return _name;
     }
@@ -36,4 +37,24 @@ public class User {
     public void set_sports(List<Sport> _sports) {
         this._sports = _sports;
     }
+
+    // Methode for calculating time
+    public double calculateTime() {
+        double time = 0;
+        for (Sport sports : _sports) {
+            time = time + sports.calculateTime();
+        }
+        return time;
+    }
+
+    // Methode for calculating time for specific sport
+    public double calculateTime(Sport sports) {
+        return sports.calculateTime();
+    }
+
+    // Methode for calculating average time
+    public double calculateAverage() {
+        return calculateTime()/_sports.size();
+    }
+
 }
