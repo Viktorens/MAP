@@ -1,8 +1,8 @@
 package com.company;
 
-public class TeamSport implements Sport {
+public class Running extends AthleticSport {
     @Override
     public double calculateTime() {
-        return 0;
+        return 30;
     }
 }
