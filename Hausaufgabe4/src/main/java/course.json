@@ -1,0 +1,28 @@
+[ {
+  "name" : "Analiza",
+  "teacher" : 1,
+  "maxEnrollment" : 20,
+  "StudentsEnrolled" : [ 12 ],
+  "credits" : 6,
+  "id" : 1,
+  "NumberOfEmptyPlaces" : 8,
+  "Free" : true
+}, {
+  "name" : "Algebra",
+  "teacher" : 2,
+  "maxEnrollment" : 28,
+  "StudentsEnrolled" : [ 6 ],
+  "credits" : 6,
+  "id" : 2,
+  "NumberOfEmptyPlaces" : 22,
+  "Free" : true
+}, {
+  "name" : "Geometrie",
+  "teacher" : 2,
+  "maxEnrollment" : 10,
+  "StudentsEnrolled" : [ 10 ],
+  "credits" : 6,
+  "id" : 3,
+  "NumberOfEmptyPlaces" : 0,
+  "Free" : false
+} ]
